@@ -1,46 +1,43 @@
-const btnLike1 = document.getElementById("btnlike1")
-const count1 = document.getElementById("count1")
+var producti document.getElementById("product1")
 
-function countLike1() {
-  let likeCounts = parseInt(count1.innerText) + 1
-  count1.innerText = likeCounts.toString()
+var qtyl document.getElementById("qtyl")
+
+var pricel document.getElementById("pricel")
+
+var product2 document.getElementById("product2")
+
+var qty2= document.getElementById("qty2")
+
+var price2 document.getElementById("price2")
+
+var carts document.getElementById("carts")
+
+var total var cash document.getElementById("total") document.getElementById("cash")
+
+var change document.getElementById("change")
+
+function addOrder() {
+
+carts.textContent=""
+
+if (parseFloat(qtyl.value) > 0) {
+
+var order= qtyl.value.toString() + pc/s x + price1.textContent + product1.textContent + Php' (parseFloat(qty1.value) *parseFloat(price1.textConten
+
+//carts.textContent += carts.value.toString() + "\n";
+
+carts.textContent += order
+
+} if (parseFloat(qty2.value) > 0) {
+
+var order=qty2.value.toString() + pc/s x price2.textContent +product2.textContent + Php' (parseFloat(qty2.value) *parseFloat (price2.textConten
+
+//carts.textContent += carts.value.toString() + "\n";
+
+carts.textContent += order
+
 }
-btnLike1.addEventListener("click", countLike1)
 
-const btnDislike1 = document.getElementById("btndislike1")
-const dcount1 = document.getElementById("dcount1")
+-}
 
-function countDislike1() {
-  let dislikeCounts = parseInt(dcount1.innerText) + 1
-  dcount1.innerText = dislikeCounts.toString()
-}
-btnDislike1.addEventListener("click", countDislike1)
-
-const btnLike2 = document.getElementById("btnlike2")
-const count2 = document.getElementById("count2")
-
-function countLike2() {
-  let likeCounts = parseInt(count2.innerText) + 1
-  count2.innerText = likeCounts.toString()
-}
-btnLike2.addEventListener("click", countLike2)
-
-const btnDislike2 = document.getElementById("btndislike2")
-const dcount2 = document.getElementById("dcount2")
-
-function countDislike2() {
-  let dislikeCounts = parseInt(dcount2.innerText) + 1
-  dcount2.innerText = dislikeCounts.toString()
-}
-btnDislike2.addEventListener("click", countDislike2)
-
-
-const submit = document.getElementById("submit")
-const comment = document.getElementById("comment")
-const commentbox = document.getElementById("commentbox")
-
-function submitComment(){
-   commentbox.textContent += comment.value.toString() + "\n";
-  comment.value=" ";
-}
-submit.addEventListener("click",submitComment)
+qty1.addEventListener("keyup", addOrder); qty2.addEventListener("keyup", addOrder);
